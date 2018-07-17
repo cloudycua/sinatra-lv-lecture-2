@@ -46,6 +46,7 @@ class PostsController < ApplicationController
   
   # posts#show action
   get '/posts/:id' do
+    # The new action is responsible for presenting a form
     # ':id' is called a route variable
     # the ':' creates the route variable
     # a url variable
@@ -104,6 +105,7 @@ class PostsController < ApplicationController
 
 
   # posts#create action
+  # The create action is responsible for PROCESSING that form
   post '/posts' do
     raise params.inspect   # TESTING ONLY
     # make sure the data gets there in the params hash 
