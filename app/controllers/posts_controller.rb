@@ -103,11 +103,12 @@ class PostsController < ApplicationController
   # Instances are to DB Rows
 
 
-
-
   # posts#create action
-
-
+  post '/posts' do
+    raise params.inspect
+    # make sure the data gets there in the params hash
+  end  
+    
   # posts@edit
 
 
