@@ -105,8 +105,12 @@ class PostsController < ApplicationController
 
   # posts#create action
   post '/posts' do
-    raise params.inspect
-    # make sure the data gets there in the params hash
+    raise params.inspect   # TESTING ONLY
+    # make sure the data gets there in the params hash 
+    # the goal at the end of this request is to have created a blog post
+    # with the data from the form (that lives in params)
+    # and save it to the database
+    # params look like this params {"title"=>"The title of my post", "content"=>"The content of my post"}
   end  
     
   # posts@edit
