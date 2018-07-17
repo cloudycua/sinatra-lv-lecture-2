@@ -1,15 +1,23 @@
-# forms are the heart of the internet
-# envelope analogy
-# ACTION is the address, where it's going
-# ACTION is always going to be a url to where it's going
-# METHOD is how it is going to get there
+<!-- forms are the heart of the internet
+ envelope analogy
+ ACTION is the address, where it's going
+ ACTION is always going to be a url to where it's going
+ METHOD is how it is going to get there -->
 
-# the whole envelope is the form tag
-<form action="/posts" method="POST">
-# Trying to make a new blog post
-# posts/new SUBMITS A POST REQUEST TO /posts
+<style>
+#the_id_of_the_input{
+  border: 4px green solid;
+}
+</style>
   
-  # use input controls to put data into the envelope
+
+<!-- the whole envelope is the form tag
+<form action="/posts" method="POST">
+ Trying to make a new blog post
+ posts/new SUBMITS A POST REQUEST TO /posts -->
+  
+<!-- use input controls to put data into the envelope -->
   <input type="text" name="the_name_of_the_input" id="the_id_of_the_input" />
+<!-- 'name' tells where in params the input should go -->
   <input type="submit" />  #create button to submit
 </form>
