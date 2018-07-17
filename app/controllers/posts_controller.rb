@@ -46,14 +46,16 @@ class PostsController < ApplicationController
     # it is a query string of that url (hashes, keys & values)
     # .../posts/9?whatever=helloworld&foo=bar&key=value
 
+    # DO NOT NEED THIS CODE
     # when user submits data, no matter what form
     # all data ends up in a has called 'params' as part of rack
     raise params.inspect
     # will see all the data passed to my request by the user
 
-    # DO NOT NEED THIS CODE
     # I want to load the blog post based on the value of id in the URL
     @post = Post.find(params[:id])
+    # looks at the params hash for the value of the id key
+    # loading that post into the @post variable
     # ':id' is a url variable
     # use ':' to establish the variable
     # anything after '?' is a query string, not part of the url
@@ -62,6 +64,8 @@ class PostsController < ApplicationController
     # data always gets stored in params no matter how it was inputed
 
     erb :"posts/show.html" # render the posts/show template
+    # renders view of selected post
+    # convention to use the views rendering the same as the action name
   end
 
 
