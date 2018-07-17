@@ -77,7 +77,13 @@ class PostsController < ApplicationController
   # - last thing want to give user direct access to is the database
   # - in front of the database are the models
   # access database through ActiveRecord, models/post.rb
-
+  # rake console
+  # pry(main)> ActiveRecord::Base.connection.exectue("SELECT * FROM posts")
+  # primitive, gives back an array of hashes, not an array of blog posts
+  # models sit in front of database,
+  # so can type Post.all instead to get back an array of instances.
+  # Post.all.to_sql
+  # DB - Model - Controller - Views - User
 
   # posts#new action
 
