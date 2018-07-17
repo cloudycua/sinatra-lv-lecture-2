@@ -114,6 +114,7 @@ class PostsController < ApplicationController
   post '/posts' do
    raise params.inspect   # TESTING ONLY - make sure the data gets there in the params hash 
     
+    # better pattern is @post = Post.new(params) so all new arguments get passed
     @post = Post.new  # Instantiate new blog post
     @post.title = params[:title]  # Take the data out of params and set that data on this object
     @post.content = params[:content]
