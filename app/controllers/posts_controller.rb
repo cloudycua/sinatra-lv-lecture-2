@@ -38,6 +38,18 @@ class PostsController < ApplicationController
 
   # posts#show action
   get '/posts/:id' do
+    # ':id' is called a route variable
+    # the ':' creates the route variable
+    # a url variable
+
+    # anything after a '?' is technically not part of the url
+    # it is a query string of that url (hashes, keys & values)
+    # .../posts/9?whatever=helloworld&foo=bar&key=value
+
+    # when user submits data, no matter what form
+    # all data ends up in a has called 'params' as part of rack
+    raise params.inspect
+    # will see all the data passed to my request by the user
 
     # I want to load the blog post based on the value of id in the URL
     @post = Post.find(params[:id])
