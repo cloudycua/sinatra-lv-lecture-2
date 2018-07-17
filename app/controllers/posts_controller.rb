@@ -106,13 +106,20 @@ class PostsController < ApplicationController
 
   # posts#create action
   # The create action is responsible for PROCESSING that form
+  # the goal at the end of this request is to have created a blog post
+  # with the data from the form (that lives in params)
+  # and save it to the database
+  # params look like this params {"title"=>"The title of my post", "content"=>"The content of my post"}
+
   post '/posts' do
-    raise params.inspect   # TESTING ONLY
-    # make sure the data gets there in the params hash 
-    # the goal at the end of this request is to have created a blog post
-    # with the data from the form (that lives in params)
-    # and save it to the database
-    # params look like this params {"title"=>"The title of my post", "content"=>"The content of my post"}
+   raise params.inspect   # TESTING ONLY - make sure the data gets there in the params hash 
+    
+    @post = Post.new  # Instantiate new blog post
+    @post.title = params[:title]  # Take the data out of params and set that data on this object
+    @post.content = params[:content]
+    @post.save
+    
+    raise "ZOMG WE DID IT"
   end  
     
   # posts@edit
