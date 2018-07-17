@@ -51,6 +51,7 @@ class PostsController < ApplicationController
     raise params.inspect
     # will see all the data passed to my request by the user
 
+    # DO NOT NEED THIS CODE
     # I want to load the blog post based on the value of id in the URL
     @post = Post.find(params[:id])
     # ':id' is a url variable

@@ -13,5 +13,7 @@ class ApplicationController < Sinatra::Base
     :baz => "this",
     :name => "avi"  #gets added from query
   }
+  # allows users to only use the value and obfuscate tke key/parameter
+  # by building route variables. Prevents url hacking.
 
 end
