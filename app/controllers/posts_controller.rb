@@ -84,14 +84,23 @@ class PostsController < ApplicationController
   # so can type Post.all instead to get back an array of instances.
   # Post.all.to_sql
   # DB - Model - Controller - Views - User
+  # Four things you can do to data:
   # Create - POST
   # Retrieve - GET
   # Update - PUT
   # Delete - DELETE
+  # ActiveRecord: Object-relational mapping (ORM)
+  # maps rows in a database to instances of a class
+  # Ruby Classes are to DB Tables as
+  # Instances are to DB Rows
 
 
-  # posts#new action
+  # posts#new action    # ACTION
+  # this action does not need data from database
+  get '/posts/new' do    # ROUTE / URL
 
+    erb :"posts/new.html"    # VIEW
+  end
 
   # posts#create action
 
