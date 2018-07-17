@@ -53,6 +53,12 @@ class PostsController < ApplicationController
 
     # I want to load the blog post based on the value of id in the URL
     @post = Post.find(params[:id])
+    # ':id' is a url variable
+    # use ':' to establish the variable
+    # anything after '?' is a query string, not part of the url
+    # ../posts/9/?whatever=helloworld&foo=bar
+    # query hash whatever key, helloworld value
+    # data always gets stored in params no matter how it was inputed
 
     erb :"posts/show.html" # render the posts/show template
   end
