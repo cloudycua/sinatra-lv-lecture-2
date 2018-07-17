@@ -36,6 +36,14 @@ class PostsController < ApplicationController
     erb :"posts/favorites.html"
   end
 
+  # PUT ABOVE '/posts/:id' route so new happens first
+  # posts#new action    # ACTION
+  # this action does not need data from database
+  get '/posts/new' do    # ROUTE / URL
+
+    erb :"posts/new.html"    # VIEW
+  end
+  
   # posts#show action
   get '/posts/:id' do
     # ':id' is called a route variable
@@ -95,12 +103,7 @@ class PostsController < ApplicationController
   # Instances are to DB Rows
 
 
-  # posts#new action    # ACTION
-  # this action does not need data from database
-  get '/posts/new' do    # ROUTE / URL
 
-    erb :"posts/new.html"    # VIEW
-  end
 
   # posts#create action
 
