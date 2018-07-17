@@ -119,7 +119,9 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     @post.save
     
-    raise "ZOMG WE DID IT".inspect
+    redirect "/posts/#{@post.id}"
+    
+    raise "ZOMG WE DID IT".inspect   # TESTING
   end  
     
   # posts@edit
