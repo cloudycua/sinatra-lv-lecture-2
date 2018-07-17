@@ -84,6 +84,11 @@ class PostsController < ApplicationController
   # so can type Post.all instead to get back an array of instances.
   # Post.all.to_sql
   # DB - Model - Controller - Views - User
+  # Create - POST
+  # Retrieve - GET
+  # Update - PUT
+  # Delete - DELETE
+
 
   # posts#new action
 
