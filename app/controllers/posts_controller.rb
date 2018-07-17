@@ -119,7 +119,7 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     @post.save
     
-    raise "ZOMG WE DID IT"
+    raise "ZOMG WE DID IT".inspect
   end  
     
   # posts@edit
