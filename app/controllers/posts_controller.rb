@@ -119,7 +119,7 @@ class PostsController < ApplicationController
     @post.content = params[:content]
     @post.save
     
-    redirect "/posts/#{@post.id}"
+    redirect "/posts/#{@post.id}"  # send to blog post page
     
     raise "ZOMG WE DID IT".inspect   # TESTING
   end  
