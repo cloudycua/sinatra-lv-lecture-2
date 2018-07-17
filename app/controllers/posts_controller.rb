@@ -68,6 +68,15 @@ class PostsController < ApplicationController
     # convention to use the views rendering the same as the action name
   end
 
+  # WHENEVER WANT TO BUILD A NEW FEATURE IN AN application
+  # ASK SELF 2 QUESTIONS
+  # Do I need a new URL?
+  # Do I need to change my database?
+  # Bookends of application
+  # - closer to user is the URL
+  # - last thing want to give user direct access to is the database
+  # - in front of the database are the models
+  # access database through ActiveRecord, models/post.rb
 
 
   # posts#new action
